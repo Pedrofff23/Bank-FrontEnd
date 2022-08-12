@@ -1,0 +1,13 @@
+<h3> criando um novo banco</h3>
+
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>nome</label>
+    <input type="text" id="InputNome" [(ngModel)] = "banco.nome" name="nome">
+  </div>
+  <div>
+    <label>numero</label>
+    <input type="text" id="InputNumero" [(ngModel)] = "banco.numero" name="numero">
+  </div>
+  <button type="submit">cadastrar</button>
+</form>

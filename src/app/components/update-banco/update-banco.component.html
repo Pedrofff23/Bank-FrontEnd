@@ -1,0 +1,12 @@
+<h3>Update Banco</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label> novo nome, atual ({{banco.nome}})</label>
+      <input type="text" id="InputNome" name="nome" [(ngModel)] = "updated.nome">
+    </div>
+    <div>
+      <label>novo numero, atual: ( {{banco.numero}} ) </label>
+      <input type="text" id="Input" name="numero" [(ngModel)] = "updated.numero">
+    </div>
+    <button type="submit">atualizar</button>
+  </form>

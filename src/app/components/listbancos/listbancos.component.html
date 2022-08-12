@@ -1,0 +1,25 @@
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>id</th>
+      <th>nome</th>
+      <th>numero</th>
+      <th>actions</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let banco of bancos">
+        <td>{{ banco.id }}</td>
+        <td>{{ banco.nome }}</td>
+        <td>{{ banco.numero }}</td>
+        <td>
+          <button (click) = "update(banco.id)">update</button>
+          <button (click) = "details(banco.id)">detalhes</button>
+          <button (click)= "deleteBank(banco.id)">apagar</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
