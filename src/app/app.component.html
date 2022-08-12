@@ -1,27 +1,18 @@
 <mat-toolbar>
+
   <span>RayhBank</span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
-  </button>
+    <a mat-button routerLink="bancos" routerLinkActive="active">Bancos</a>
+    <a mat-button routerLink="agencias" routerLinkActive="active">Agencia</a>
+    <a mat-button routerLink="bancos/novo" routerLinkActive="active">Novo banco</a>
+    <div class="fill-espace"></div>
+  <a mat-raised-button color="secondary" routerLink="login">Login</a>
 </mat-toolbar>
-<nav class="">
-  <ul>
-    <li>
-      <a routerLink="bancos" routerLinkActive="active">bancos</a>
-    </li>
-    <li>
-      <a routerLink="agencia" routerLinkActive="active">agencia</a>
-    </li>
-    <li>
-      <a routerLink="bancos/novo" routerLinkActive="active">novo banco</a>
-    </li>
-  </ul>
-</nav>
-<div class="container">
+<div>
   <router-outlet></router-outlet>
 </div>
 <footer>
-  <div>
-    <span>Todos os direitos reservados pelo Pai</span>
+  <div class="container">
+    <span class="copyright"> Financiado pelo pai ©2022</span>
   </div>
 </footer>
