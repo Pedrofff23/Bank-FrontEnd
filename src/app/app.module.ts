@@ -20,6 +20,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatInputModule} from "@angular/material/input";
+import { MaterialModule } from './material-module';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import {MatInputModule} from "@angular/material/input";
     MatSelectModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
-    MatInputModule
+    MatInputModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
