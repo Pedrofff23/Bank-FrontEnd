@@ -1,7 +1,8 @@
 export class Banco{
   id:any ;
-  nome: string ;
   numero: string;
+  nome: string ;
+
 
   constructor() {
     this.id = null;

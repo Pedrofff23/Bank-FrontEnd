@@ -14,9 +14,9 @@
         <td>{{ banco.nome }}</td>
         <td>{{ banco.numero }}</td>
         <td>
-          <button (click) = "update(banco.id)">update</button>
-          <button (click) = "details(banco.id)">detalhes</button>
-          <button (click)= "deleteBank(banco.id)">apagar</button>
+          <button mat-raised-button class="container-button" (click) = "update(banco.id)">update</button>
+          <button mat-raised-button class="container-button" (click) = "details(banco.id)">detalhes</button>
+          <button mat-raised-button class="container-button" (click)= "deleteBank(banco.id)">apagar</button>
         </td>
       </tr>
     </tbody>

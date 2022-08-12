@@ -2,6 +2,8 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {Banco} from "../../bancos/model/Banco";
 import {BancosService} from "../../bancos/bancos.service";
+import {FormControl} from "@angular/forms";
+import {map, Observable, startWith} from "rxjs";
 
 @Component({
   selector: 'app-listbancos',
@@ -22,8 +24,8 @@ export class ListbancosComponent implements OnInit {
   public buscarTodos():void{
     this.bancoService.getAll().subscribe(
       (response: Banco[]) =>{
-        this.bancos = response
         console.log(response)
+        this.bancos = response
       }
     )
   }

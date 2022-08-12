@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateBancoComponent implements OnInit {
   id: number = 0 ;
+  nome : string =''
+  numero : string = '';
   banco : Banco = new Banco();
   updated : Banco = new Banco();
 
@@ -23,8 +25,10 @@ export class UpdateBancoComponent implements OnInit {
     this.bancoService.getbancoById(this.id).subscribe( data => {
         console.log(data);
         this.banco = data;
+        this.nome = data.nome;
+        this.numero = data.numero ;
       }, error => console.log(error));
-    this.updated = this.banco;
+
   }
   public goToBancoList(){
     this.router.navigate(['bancos']);

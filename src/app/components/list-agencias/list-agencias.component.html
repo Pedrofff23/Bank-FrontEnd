@@ -1,0 +1,17 @@
+<h3>lista de agencias</h3>
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>Banco</th>
+      <th>Agencia</th>
+      <th>Bairro</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let agencia of agencias">
+        <td>{{agencia.agencia}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

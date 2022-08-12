@@ -12,6 +12,15 @@ import { CreateBancoComponent } from './components/create-banco/create-banco.com
 import { FormsModule } from "@angular/forms";
 import { UpdateBancoComponent } from './components/update-banco/update-banco.component';
 import { GetBancoComponent } from './components/get-banco/get-banco.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {ListAgenciasComponent} from "./components/list-agencias/list-agencias.component";
+import {CreateAgenciasComponent} from "./components/create-agencias/create-agencias.component";
+import {MatSelectModule} from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatInputModule} from "@angular/material/input";
+
 
 @NgModule({
   declarations: [
@@ -19,7 +28,9 @@ import { GetBancoComponent } from './components/get-banco/get-banco.component';
     ListbancosComponent,
     CreateBancoComponent,
     UpdateBancoComponent,
-    GetBancoComponent
+    GetBancoComponent,
+    ListAgenciasComponent,
+    CreateAgenciasComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +39,13 @@ import { GetBancoComponent } from './components/get-banco/get-banco.component';
     MatToolbarModule,
     HttpClientModule,
     MatTableModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

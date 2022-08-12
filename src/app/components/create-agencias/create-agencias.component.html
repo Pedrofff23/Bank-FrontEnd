@@ -1,0 +1,40 @@
+<div>
+<!--    usando o service de utils (acesso para a tabela cd_complementares no banco de dados)
+a sintax para o select é *ngmodel = 'o campo que ele vai preencher, name = a qual variavel ele esta atrelada
+normalmente a let do for, [value] = o valor que vc vai pegar quando foi escolhido-->
+  <form>
+    <div>
+      <mat-form-field appearance="standard" color="primary">
+        <mat-label >Favorite food</mat-label>
+        <mat-select [(ngModel)]="agencia.tipo" name="util">
+          <mat-option *ngFor="let util of utils" [value]="util.id">
+            {{util.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <label>fone</label>
+      <input type="number" name="bancoIdInput" id="fone1Input" [(ngModel)]="agencia.fone1">
+    </div>
+    <div>
+      <mat-form-field appearance="standard" color="primary">
+        <mat-label >Favorite food</mat-label>
+        <mat-select [(ngModel)]="agencia.tipo1" name="util">
+          <mat-option *ngFor="let util of utils" [value]="util.id">
+            {{util.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <label>agencia</label>
+      <input type="number" name="bancoIdInput" id="agenciaInput" [(ngModel)]="agencia.agencia">
+    </div>
+    <div>
+      <label>nome da Agencia</label>
+      <input type="number" name="bancoIdInput" id="nomeAgenciaInput" [(ngModel)]="agencia.nome_agencia">
+    </div>
+    <button type="submit">cadastrar</button>
+  </form>
+</div>

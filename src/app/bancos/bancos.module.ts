@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DeleteBancoComponent } from '../components/delete-banco/delete-banco.component';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -9,7 +10,8 @@ import { DeleteBancoComponent } from '../components/delete-banco/delete-banco.co
     DeleteBancoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule
   ]
 })
 export class BancosModule { }
