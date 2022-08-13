@@ -29,12 +29,12 @@ normalmente a let do for, [value] = o valor que vc vai pegar quando foi escolhid
     </div>
     <div>
       <label>agencia</label>
-      <input type="number" name="bancoIdInput" id="agenciaInput" [(ngModel)]="agencia.agencia">
+      <input type="text" name="bancoIdInput" id="agenciaInput" [(ngModel)]="agencia.agencia">
     </div>
     <div>
       <label>nome da Agencia</label>
-      <input type="number" name="bancoIdInput" id="nomeAgenciaInput" [(ngModel)]="agencia.nome_agencia">
+      <input type="text" name="bancoIdInput" id="nomeAgenciaInput" [(ngModel)]="agencia.nome_agencia">
     </div>
-    <button type="submit">cadastrar</button>
+    <button type="submit" (click)="onSubmit()">cadastrar</button>
   </form>
 </div>

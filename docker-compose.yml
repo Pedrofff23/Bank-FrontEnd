@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+  angular:
+    image: rayhbank-angular
+    build: .
+    ports:
+      - "8081:80"
+

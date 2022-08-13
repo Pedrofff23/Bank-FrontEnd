@@ -12,6 +12,7 @@ import {FormControl} from "@angular/forms";
 export class CreateAgenciasComponent implements OnInit {
 
   readonly utilfiltro = 'telefone';
+
   public utils: Utils[] = [] ;
   public agencia : Agencia = new Agencia()
 
