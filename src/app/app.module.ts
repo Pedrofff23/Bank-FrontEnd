@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatInputModule} from "@angular/material/input";
 import { MaterialModule } from './material-module';
+import { DeleteAgenciaComponent } from './components/delete-agencia/delete-agencia.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { MaterialModule } from './material-module';
     GetBancoComponent,
     ListAgenciasComponent,
     CreateAgenciasComponent,
+    DeleteAgenciaComponent,
   ],
   imports: [
     BrowserModule,

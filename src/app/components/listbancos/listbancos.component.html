@@ -33,6 +33,10 @@
           </mat-header-cell>
 
           <mat-cell *matCellDef="let banco">
+            <button mat-icon-button color="primary" aria-label="Detalhes Banco">
+              <mat-icon (click)="onDetails(banco.id)">visibility</mat-icon>
+            </button>
+            
             <button mat-icon-button color="primary" aria-label="Editar Banco">
               <mat-icon (click)="onUpdate(banco.id)">edit</mat-icon>
             </button>
