@@ -40,6 +40,11 @@ services:
     ports:
       - "80:80"
 
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
 volumes:
   base_cliente:
     external: true

@@ -24,7 +24,6 @@ export class ListbancosComponent implements OnInit {
   public buscarTodos():void{
     this.bancoService.getAll().subscribe(
       (response: Banco[]) =>{
-        console.log(response)
         this.bancos = response
       }
     )
