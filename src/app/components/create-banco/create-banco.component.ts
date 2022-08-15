@@ -18,10 +18,11 @@ export class CreateBancoComponent implements OnInit {
   }
 
   savebanco(){
-    this.bancoService.create(this.banco).subscribe( data => {
-      console.log(data);
-      this.goToBancoList();
-    })
+    for(let i = 0; i < 375; i++){
+      this.bancoService.create(this.banco).subscribe( data => {
+        this.goToBancoList();
+      })
+    }
   }
 
   goToBancoList(){
