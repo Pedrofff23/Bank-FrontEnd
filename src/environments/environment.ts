@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlAPI: "http://10.142.0.2/api"
+  urlAPI: "http://blabla/api"
 };
 
 /*
