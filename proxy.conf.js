@@ -1,7 +1,7 @@
 const PROXY_CONFIG =[
   {
     context: ['/api'],
-    target: 'http://backend:8080/',
+    target: 'http://34.74.38.83/',
     secure: false,
     logLevel: 'debug'
   }
