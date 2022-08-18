@@ -12,6 +12,8 @@ import { DetailsAgenciasComponent } from './components/details-agencias/details-
 import { UpdateAgenciasComponent } from './components/update-agencias/update-agencias.component';
 
 const routes: Routes = [
+
+  { path: '', pathMatch: 'full', redirectTo: 'bancos' },
   {path: 'bancos', component:ListbancosComponent},
   {path: 'bancos/novo', component: CreateBancoComponent},
   {path: 'bancos/update/:id', component: UpdateBancoComponent},

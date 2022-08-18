@@ -7,13 +7,13 @@
     <form [formGroup]="form" class="min-width" (ngSubmit)="onSubmit()">
       <div>
          <mat-form-field class="full-width ">
-            <input matInput placeholder="Nome" type="text" id="InputNome" name="nome" formControlName="nome">
+            <input matInput placeholder="Nome" type="text" id="InputNome" name="nome" formControlName="nome" required>
           </mat-form-field>
       </div>
       <div>
         <mat-form-field class="full-width">
 
-          <input matInput placeholder="Numero" type="text" id="Input" name="numero" formControlName="numero">
+          <input matInput placeholder="Numero" type="text" id="Input" name="numero" formControlName="numero" required>
         </mat-form-field>
       </div>
         <mat-card-actions>
