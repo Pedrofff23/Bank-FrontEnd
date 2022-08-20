@@ -36,6 +36,14 @@ export class ListAgenciasComponent implements OnInit {
     this.buscarTodos()
   }
 
+
+  // getBanco(id: number){
+  //   let nome: string;
+  //   this.bancosService.getbancoById(id).subscribe(data => {
+  //     nome = data.nome;
+  //   })
+  // }
+
   public buscarTodos(){
     this.agenciasService.getAll().subscribe(result =>{
         this.empdata = result;
@@ -53,6 +61,7 @@ export class ListAgenciasComponent implements OnInit {
     this.bancoService.getbancoById(banco_id)
     .subscribe(result =>{
           banco = result;
+          console.log(banco)
           return banco.nome
         }
       )
@@ -65,7 +74,7 @@ export class ListAgenciasComponent implements OnInit {
   onDetails(id:number){
     this.router.navigate(['/agencias',id])
   }
-  
+
   onDelete(id: number) {
     this.agenciaService.delete(id).subscribe(data => {
       this.agenciaService.getAll().subscribe(
