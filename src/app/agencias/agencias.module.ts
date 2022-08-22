@@ -1,22 +1,16 @@
-import { MaterialModule } from './../material-module';
-import { CommonModule } from '@angular/common';
+import { DeleteAgenciaComponent } from './../components/delete-agencia/delete-agencia.component';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-
-
+import { CommonModule } from '@angular/common';
+import {MatButtonModule} from '@angular/material/button';
+import { MaterialModule } from '../material-module';
 
 @NgModule({
   declarations: [
-
+    DeleteAgenciaComponent
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    MatInputModule,
-    MatSelectModule,
-    ReactiveFormsModule,
+    MatButtonModule,
     MaterialModule
   ]
 })

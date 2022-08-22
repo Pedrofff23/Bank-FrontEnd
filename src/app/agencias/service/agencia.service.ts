@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {delay, first, Observable} from "rxjs";
 import {Agencia} from "../model/Agencia";
 import {environment} from "../../../environments/environment.prod";
 
@@ -13,6 +13,10 @@ export class AgenciaService {
 
   public getAll(): Observable<Agencia[]> {
     return this.http.get<Agencia[]>(`${this.urlApi}`)
+    .pipe(
+      first(),
+      delay(1000)
+    );
   }
   public getOne(id : number):Observable<Agencia> {
     return this.http.get<Agencia>(`${this.urlApi}/${id}`)

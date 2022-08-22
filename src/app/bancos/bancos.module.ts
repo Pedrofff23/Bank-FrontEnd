@@ -4,8 +4,6 @@ import { DeleteBancoComponent } from '../components/delete-banco/delete-banco.co
 import {MatButtonModule} from '@angular/material/button';
 import { MaterialModule } from '../material-module';
 
-
-
 @NgModule({
   declarations: [
     DeleteBancoComponent

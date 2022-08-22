@@ -23,6 +23,7 @@ import {MatInputModule} from "@angular/material/input";
 import { MaterialModule } from './material-module';
 import { DeleteAgenciaComponent } from './components/delete-agencia/delete-agencia.component';
 import { DestalhesAgenciaComponent } from './components/destalhes-agencia/destalhes-agencia.component';
+import { UpdateAgenciaComponent } from './components/update-agencia/update-agencia.component';
 
 
 @NgModule({
@@ -34,8 +35,8 @@ import { DestalhesAgenciaComponent } from './components/destalhes-agencia/destal
     GetBancoComponent,
     ListAgenciasComponent,
     CreateAgenciasComponent,
-    DeleteAgenciaComponent,
     DestalhesAgenciaComponent,
+    UpdateAgenciaComponent,
   ],
   imports: [
     BrowserModule,

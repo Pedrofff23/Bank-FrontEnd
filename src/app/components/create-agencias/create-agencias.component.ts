@@ -41,7 +41,6 @@ export class CreateAgenciasComponent implements OnInit {
     this.utilsService.getByTipo(this.utilfiltro).subscribe(
       (response :Utils[]) => {
         this.utils = response;
-        console.log(response)
       }
     )
   }
@@ -61,11 +60,6 @@ export class CreateAgenciasComponent implements OnInit {
     this.AgenciaService.save(this.form.value)
     .subscribe(data=>{this.onSucces()}, error => {this.onError()})
   }
-
-    // onSubmit():void {
-    //   console.log(this.agencia)
-    // }
-
 
   onCancel(){
     this.router.navigate(['agencias'])
