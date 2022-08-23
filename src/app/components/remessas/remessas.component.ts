@@ -1,12 +1,11 @@
-import { FileHandle } from './../../_model/file-handle.model';
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-// import { Image } from 'src/app/_model/image.model';
 import { NgForm } from '@angular/forms';
-import { RemessasService } from 'src/app/remessas/services/remessas.service';
-import { HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { RemessasService } from 'src/app/remessas/services/remessas.service';
+
+import { FileHandle } from './../../_model/file-handle.model';
 
 @Component({
   selector: 'app-remessas',
