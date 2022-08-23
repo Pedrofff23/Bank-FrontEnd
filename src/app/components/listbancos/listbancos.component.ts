@@ -55,9 +55,8 @@ export class ListbancosComponent implements OnInit {
     this.router.navigate(['/bancos/update',id]);
   }
 
-  onDetails(id:number){this.router.navigate(['/bancos',id])
-
-  }
+  onDetails(id:number){this.router.navigate(['/bancos',id])}
+  
   onDelete(id: number) {
     this.bancoService.delete(id).subscribe(data => {
       this.bancoService.getAll().subscribe(

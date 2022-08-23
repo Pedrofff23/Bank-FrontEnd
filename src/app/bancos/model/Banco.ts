@@ -5,7 +5,6 @@ export class Banco{
 
 
   constructor() {
-    this.id = null;
     this.nome = '';
     this.numero = '';
   }

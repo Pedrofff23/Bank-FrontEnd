@@ -32,7 +32,6 @@ export class CreateBancoComponent implements OnInit {
 
   savebanco(){
     this.bancoService.create(this.banco).subscribe( data => {
-      console.log(data);
       this.goToBancoList();
     })
   }

@@ -11,6 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./update-banco.component.css']
 })
 export class UpdateBancoComponent implements OnInit {
+
   id: number = 0 ;
   nome : string =''
   numero : string = '';
@@ -57,5 +58,11 @@ export class UpdateBancoComponent implements OnInit {
     this.snackBar.open('Erro ao salvar Banco','',{duration:5000});
   }
 
+  getBancoDetails(){
+    return{
+      nome: "",
+      numero:""
+    }
+  }
 
 }
