@@ -11,7 +11,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./update-banco.component.css']
 })
 export class UpdateBancoComponent implements OnInit {
-
   id: number = 0 ;
   nome : string =''
   numero : string = '';
@@ -26,8 +25,8 @@ export class UpdateBancoComponent implements OnInit {
     private router : Router,
     private snackBar: MatSnackBar) {
       this.form = this.formBuilder.group({
-        nome:[this.nome],
-        numero:[this.numero]
+        nome:[],
+        numero:[]
       });}
 
   ngOnInit(): void {
@@ -43,7 +42,13 @@ export class UpdateBancoComponent implements OnInit {
     this.updated.id = this.banco.id
     this.bancoService.update(this.id , this.updated)
     .subscribe(data=>{this.onSucces()}, error => {this.onError()})
+    this.goToBancoList();
   }
+
+  goToBancoList(){
+    this.router.navigate(['/bancos']);
+  }
+
 
   onCancel(){
     this.router.navigate(['bancos'])
@@ -58,11 +63,5 @@ export class UpdateBancoComponent implements OnInit {
     this.snackBar.open('Erro ao salvar Banco','',{duration:5000});
   }
 
-  getBancoDetails(){
-    return{
-      nome: "",
-      numero:""
-    }
-  }
 
 }

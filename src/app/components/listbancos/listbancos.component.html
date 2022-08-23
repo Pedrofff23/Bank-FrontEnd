@@ -14,8 +14,8 @@
           <td mat-cell *matCellDef="let banco"> {{ banco.id }} </td>
         </ng-container>
         <!-- Position Column -->
-        <ng-container matColumnDef="nome">
-          <th mat-header-cell mat-sort-header *matHeaderCellDef> Banco </th>
+        <ng-container matColumnDef="nome" >
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Banco <input matInput placeholder="Filtro" (keyup)="Filterchange($event)"></th>
           <td mat-cell *matCellDef="let banco"> {{ banco.nome }} </td>
         </ng-container>
 

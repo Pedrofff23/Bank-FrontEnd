@@ -9,11 +9,13 @@ import {HttpClient} from "@angular/common/http";
 })
 export class RemessasService {
 
-  readonly urlApi = environment.urlAPI.concat('/agencias')
+  readonly urlApi = environment.urlAPI.concat('/remessas')
   constructor(private http:HttpClient) { }
 
 
-  public save(remessa: Image): Observable<Image> {
-    return this.http.post<Image>(`${this.urlApi}`,remessa);
+  UploadImage(file:File):Observable<any>{
+    const formData = new FormData();
+    formData.append("ProfileUri",file)
+    return this.http.post(`${this.urlApi}/upload`,formData)
   }
 }

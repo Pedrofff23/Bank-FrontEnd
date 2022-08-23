@@ -46,7 +46,7 @@ export class ListbancosComponent implements OnInit {
         this.dataSource= new MatTableDataSource<Banco>(this.empdata);
         this.dataSource.paginator=this.paginator;
         this.dataSource.sort=this.sort;
-
+        
       }
     )
   }
@@ -56,7 +56,7 @@ export class ListbancosComponent implements OnInit {
   }
 
   onDetails(id:number){this.router.navigate(['/bancos',id])}
-  
+
   onDelete(id: number) {
     this.bancoService.delete(id).subscribe(data => {
       this.bancoService.getAll().subscribe(

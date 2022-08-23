@@ -6,6 +6,7 @@ import { NgForm } from '@angular/forms';
 import { RemessasService } from 'src/app/remessas/services/remessas.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-remessas',
@@ -20,7 +21,8 @@ export class RemessasComponent implements OnInit {
   constructor(
     private remessa: RemessasService,
     private sanitizer: DomSanitizer,
-    private router: Router
+    private router: Router,
+    private snackBar: MatSnackBar
   ) {}
 
   ngOnInit() {}
@@ -38,9 +40,7 @@ export class RemessasComponent implements OnInit {
     // );
   }
 
-  goToImagesList() {
-    this.router.navigate(['/remessa']);
-  }
+  goToImagesList() {this.router.navigate(['/remessa']);}
 
   prepareFormData(remessa: Image): FormData {
     const formData = new FormData();
@@ -61,6 +61,11 @@ export class RemessasComponent implements OnInit {
     if (event.target.files) {
       const file = event.target.files[0];
 
+      this.remessa.UploadImage(file)
+      .subscribe(data=>{this.onSucces()}, error => {this.onError()}
+
+      )
+
       const fileHandle: FileHandle = {
         file: file,
         url: this.sanitizer.bypassSecurityTrustUrl(
@@ -71,4 +76,13 @@ export class RemessasComponent implements OnInit {
       this.image.productImages.push(fileHandle);
     }
   }
+
+  private onSucces(){
+    this.snackBar.open('Imagem salva com sucesso','',{duration:5000});
+  }
+
+  private onError(){
+    this.snackBar.open('Erro ao salvar Imagem','',{duration:5000});
+  }
+
 }

@@ -25,6 +25,7 @@ export class DestalhesAgenciaComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.agenciaService.getOne(this.id).subscribe(data =>{
       this.agencia = data
+      console.log(this.agencia)
     },
       error => console.log(error))
   }
