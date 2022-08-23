@@ -1,4 +1,5 @@
 FROM nginx:alpine
 
-COPY /dist/untitled /usr/share/nginx/html
+COPY /dist/front-angular /usr/share/nginx/html
+
 EXPOSE 8080

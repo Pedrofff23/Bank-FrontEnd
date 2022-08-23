@@ -16,6 +16,7 @@ export class CreateAgenciasComponent implements OnInit {
 
   form: FormGroup;
   readonly utilfiltro = 'telefone';
+
   public utils: Utils[] = [] ;
   public agencia : Agencia = new Agencia()
 

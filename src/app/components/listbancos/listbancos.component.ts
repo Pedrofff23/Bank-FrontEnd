@@ -39,6 +39,7 @@ export class ListbancosComponent implements OnInit {
     this.buscarTodos();
   }
 
+
   public buscarTodos(){
     this.bancoService.getAll().subscribe(result =>{
         this.empdata = result;
